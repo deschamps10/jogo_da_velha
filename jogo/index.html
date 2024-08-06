@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+</head>
+
+<body>
+    <div class="grid">
+        <div id="container" class="grid" data-grid></div>
+    </div>
+    <div class="winning-message" data-winning-message>
+        <button>Reiniciar!</button> 
+    </div>
+    
+</body>
+
+<script>
+    const container = document.getElementById('container');
+
+    for (let i = 0; i < 9; i++) {
+        const box = document.createElement('div');
+        box.className = 'box';
+        container.appendChild(box);
+    }
+</script>
+
+<style>
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 100px);
+        grid-template-rows: repeat(3, 100px);
+        gap: 10px;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #ccc;
+        background-color: #f0f0f0;
+        font-size: 16px;
+        height: 100px;
+        width: 100px;
+    }
+
+    .winning-message {
+            display: none;     
+    }
+
+</style>
+
+
+</html>
